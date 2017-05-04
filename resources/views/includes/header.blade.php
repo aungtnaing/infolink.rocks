@@ -1,152 +1,79 @@
-	<!-- Header
-	============================================= -->
-	<header id="header" class="transparent-header full-header" data-sticky-class="not-dark">
-		
-		
-		<!-- Top Bar
-		============================================= -->
-		<div id="top-bar">
-
-			<div class="container clearfix">
-
-				<div class="col_half nobottommargin">
-
-					<!-- Top Links
-					============================================= -->
-					<div class="top-links">
-						
-						<ul>
-							<!-- <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="icon-user"></i><i class="icon-angle-down"></i></a>
-						<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-						<li><a href="#">Logout <i class="icon-signout"></i></a></li>
-					</ul> -->
-					
-					<li><a href="<?php echo url(); ?>/en"><img class="img-circle img-thumbnail" src="<?php echo url();  ?>/images/eng.png">Eng</a></li>
-					<li><a href="<?php echo url(); ?>/mn"><img class="img-circle img-thumbnail" src="<?php echo url();  ?>/images/myan.png">မြန်မာ</a></li>
-					@if (Auth::guest())
-					<li><a href="{{ url('/auth/login') }}">Login</a>
-						<div class="top-link-section">
-							
-                                      @if (count($errors) > 0)
-                                <div class="alert alert-danger">
-                                    <strong>Whoops!</strong> There were some problems with your input.<br><br>
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                @endif
-                                         <form method="POST" action="{{ url('/auth/login') }}">
-                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-								<div class="input-group" id="top-login-username">
-									<span class="input-group-addon"><i class="icon-user"></i></span>
-									 <input type="email" class="form-control" placeholder="email" name="email" value="{{ old('email') }}">
-								</div>
-								<div class="input-group" id="top-login-password">
-									<span class="input-group-addon"><i class="icon-key"></i></span>
-								              <input type="password" class="form-control" placeholder="password" name="password">
-								</div>
-								<label class="checkbox">
-									<input type="checkbox" value="remember-me"> Remember me
-								</label>
-								
-							</br>
-							<button class="btn btn-danger btn-block" type="submit">Sign in</button>
-						</form>
-
-						<a href="{{ url('/auth/register') }}"><button class="btn btn-danger btn-block" type="submit">Register</button></a>
+	<header class="site-header">
+		<div id="main-header" class="main-header header-sticky">
+			<div class="inner-header container clearfix">
+				<div class="logo">
+					<a href="/"></a>
+				</div>
+				<!-- <div><img src="images//home/kyaw/Desktop/17439700_10155277754424474_2065623912_n.png"></div> -->
+				<br>
+				
+					<div class="header-right-toggle pull-right">
+						<a href="javascript:void(0)" class="side-menu-button"><i class="fa fa-bars"></i></a>
 					</div>
-				</li>
-				@else
-				@if(Auth::user()->photourl!="")
-				<!-- <li><a href=""><img src="{{ Auth::user()->photourl }}" width="25" height="25" class="img-circle"> <span>{{ substr(Auth::user()->name,0, 5) }}</span></a> -->
-				<li><a href=""><img src="{{ Auth::user()->photourl }}" width="25" height="25" class="img-circle"> <span>{{ Auth::user()->name }}</span></a>
-					@else
-					<li><a href=""><i class="icon-user"></i> <span>{{ Auth::user()->name }}</span></a>
-						@endif
-						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							<li><a href="{{ route("profiles.edit", Auth::user()->id) }}"><i class="icon-user"></i> <span>My Profile</span></a></li>
-							<li><a href="{{ url('/auth/logout') }}">Logout <i class="icon-signout"></i></a></li>
-						</ul>
-					</li>
-					@endif
-				</ul>
-			</div><!-- .top-links end -->
+				<div class="navbar text-right hidden-xs hidden-sm">
+					
 
+					<div class="navbar-collapse collapse">
+						<!-- Right nav -->
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="/">HOME</a></li>
+							<li><a href="<?php echo url(); ?>/aboutus">ABOUT US</a></li>
+							<li><a href="">PROJECTS <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									@foreach($categorys as $category)
+										@if(count($category->posts)>0)
+											<li><a href="#">{{ $category->name }}<span class="caret"></span></a>
+											<ul class="dropdown-menu">
+											@foreach($category->posts as $post)
+													
+														<li><a href="">{{ $post->name }}</a></li>
+													
+											@endforeach
+											</ul>
+											</li>
+										@else
+											<li><a href="#">{{ $category->name }}</a></li>
+										@endif
+									@endforeach
+									
+								</ul>
+							</li>
+							<li><a href="<?php echo url(); ?>/services">SERVICES</a></li>
+							<li><a href="<?php echo url(); ?>/contactus">CONTACT US</a></li>
+							<li class="navbutton-english"><a href="">English<span class="caret"></a>
+									<ul class="dropdown-menu">
+										<li class="navbutton-myanmar"><a href="<?php echo url(); ?>/mn">&nbsp;&nbsp;Myanmar</a></li>
+										<li class="navbutton-english"><a href="<?php echo url(); ?>/en">&nbsp;&nbsp;English</a></li>
+									</ul>
+							</li>
+							<!-- <li class="side-menu-button"><a href="javascript:void(0)"><i class="fa fa-bars"></i></a></li> -->
+						</ul>
+
+					</div><!--/.nav-collapse -->
+
+				</div>
+
+			</div>
 		</div>
+	</header>
 
-		<div class="col_half fright col_last nobottommargin">
+	<script type="text/javascript">
 
-					<!-- Top Social
-					============================================= -->
-					<div id="top-social">
-						<ul>
-							<li><a href="#" class="si-facebook"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
-							<li><a href="#" class="si-twitter"><span class="ts-icon"><i class="icon-twitter"></i></span><span class="ts-text">Twitter</span></a></li>
-							<li><a href="#" class="si-instagram"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>
-							<li><a href="tel:+91.11.85412542" class="si-call"><span class="ts-icon"><i class="icon-call"></i></span><span class="ts-text">+95.9.1234567</span></a></li>
-							<li><a href="mailto:info@mymagicalmyanmar.com" class="si-email3"><span class="ts-icon"><i class="icon-email3"></i></span><span class="ts-text">info@mymagicalmyanmar.com</span></a></li>
-							
-							
-						</ul>
-					</div><!-- #top-social end -->
+		$(document).ready(function(){       
+			var scroll_start = 0;
 
-				</div>
+			$(document).scroll(function() { 
+				scroll_start = $(this).scrollTop();
+				if(scroll_start > 0) {
+					$(".navbar .nav > li > a").css('color', 'black');
+				}
+				else
+				{
+					$(".navbar .nav > li > a").css('color', '#ddd');
+				}
+			});
 
-			</div>
+		});
 
-		</div><!-- #top-bar end -->
-		
-		
-		
 
-		<div id="header-wrap" >
-
-			<div class="container clearfix">
-
-				<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
-
-					<!-- Logo
-					============================================= -->
-					<div id="logo">
-						<a href="/" class="standard-logo" data-dark-logo="<?php echo url(); ?>/images/logo-dark.png"><img src="<?php echo url(); ?>/images/logo.png" alt="Canvas Logo"></a>
-						<a href="/" class="retina-logo" data-dark-logo="<?php echo url(); ?>/images/logo-dark@2x.png"><img src="<?php echo url(); ?>/images/logo@2x.png" alt="Canvas Logo"></a>
-					</div><!-- #logo end -->
-
-					<!-- Primary Navigation
-					============================================= -->
-					<nav id="primary-menu" class="dark">
-
-						<ul>
-							<li class="current"><a href="/"><div>Home</div></a>
-								
-							</li>
-							<li><a href="<?php echo url(); ?>/magazine"><div>Magazine</div></a>
-								
-							</li>
-							<li><a href="<?php echo url(); ?>/booking"><div>Booking</div></a>
-								
-							</li>
-							<li><a href="<?php echo url(); ?>/joinus"><div>Join Us</div></a>
-								
-							</li>
-						</ul>
-						
-
-						<!-- Top Search
-						============================================= -->
-						<div id="top-search">
-							<a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-							<form action="search.html" method="get">
-								<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
-							</form>
-						</div><!-- #top-search end -->
-
-					</nav><!-- #primary-menu end -->
-
-				</div>
-
-			</div>
-
-		</header><!-- #header end -->
+	</script>

@@ -1,29 +1,16 @@
-		<section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix" data-autoplay="7000" data-speed="650" data-loop="true">
-			<div>
-
-				<div class="swiper-container swiper-parent">
-
-
-					<div class="swiper-wrapper">
-						@foreach($mainslides as $mainslide)
-						<div class="swiper-slide dark" style="background-image: url({{  $mainslide->photourl1 }});">
-							<div class="container clearfix">
-								<div class="slider-caption slider-caption-center">
-									<h2 data-caption-animate="fadeInUp">{{ $mainslide->mname }}</h2>
-									<p data-caption-animate="fadeInUp" data-caption-delay="200">{{ $mainslide->msubtitle }}</p>
-								</div>
-							</div>
-						</div>
-						
-						@endforeach
-					</div>
-					<div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
-					<div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
-				</div>
-
-				<a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
-
-			</div>
-
-		</section>
-		
+<div class="slider">
+    <div class="fullwidthbanner-container">
+        <div class="fullwidthbanner">
+            <ul>
+                
+                 @foreach($mainslides as $mainslide)
+                <li class="first-slide" data-transition="fade" data-slotamount="10" data-masterspeed="300">
+                    <img src="{{ $mainslide->photourl1 }}" data-fullwidthcentering="on" alt="slide">
+             		<div class="tp-caption first-line lfr tp-resizeme start" data-x="center" data-hoffset="0" data-y="center" data-speed="2500" data-start="500" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0"><span>Info-link project / {{ $mainslide->created_at }}</span><h1 class="mfbody">{{ $mainslide->mname }} <em class="mfbody">{{ $mainslide->msubtitle }}</em></h1><div class="slider-button"><a href="#">View Project</a></div></div>
+                </li>
+                @endforeach
+            
+            </ul>
+        </div>
+    </div>
+</div>

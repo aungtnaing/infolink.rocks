@@ -11,19 +11,37 @@
 
  
 
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  
+
   <link rel="stylesheet" href="<?php echo url(); ?>/css/bootstrap.css">
+  <link rel="stylesheet" href="<?php echo url(); ?>/css/animate.css">
+  <link rel="stylesheet" href="<?php echo url(); ?>/css/jquery-ui.css">
+  <link rel="stylesheet" href="<?php echo url(); ?>/css/simple-line-icons.css">
+  <link rel="stylesheet" href="<?php echo url(); ?>/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo url(); ?>/css/icon-font.css">
+  <link rel="stylesheet" href="<?php echo url(); ?>/css/anchro.css">
+
+  <link rel="stylesheet" href="<?php echo url(); ?>/rs-plugin/css/settings.css">
+
+
+  <link href="<?php echo url(); ?>/css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+
  
-  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="<?php echo url(); ?>/css/bootstrap.css" type="text/css" />
-  <link rel="stylesheet" href="<?php echo url(); ?>/css/style.css" type="text/css" />
-  <link rel="stylesheet" href="<?php echo url(); ?>/css/swiper.css" type="text/css" />
-  <link rel="stylesheet" href="<?php echo url(); ?>/css/dark.css" type="text/css" />
-  <link rel="stylesheet" href="<?php echo url(); ?>/css/font-icons.css" type="text/css" />
-  <link rel="stylesheet" href="<?php echo url(); ?>/css/animate.css" type="text/css" />
-  <link rel="stylesheet" href="<?php echo url(); ?>/css/magnific-popup.css" type="text/css" />
-  <link rel="stylesheet" href="<?php echo url(); ?>/css/responsive.css" type="text/css" />
+ <!-- beautiful font -->
+  <link rel="stylesheet" type="text/css" href="<?php echo url(); ?>/css/logotype.css">
+
+  <!--  notification message -->
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="<?php echo url(); ?>/css/notify-metro.css">
+  <script src="<?php echo url(); ?>/js/notify.js"></script>
+  <script src="<?php echo url(); ?>/js/notify-metro.js"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="<?php echo url(); ?>/images/mymagicalmyanmar-web-favicon.png" type="image/png" sizes="16x16">
+  
+  <!-- <link rel="icon" href="<?php echo url(); ?>/images/mymagicalmyanmar-web-favicon.png" type="image/png" sizes="16x16"> -->
 
   <!--  notification message -->
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

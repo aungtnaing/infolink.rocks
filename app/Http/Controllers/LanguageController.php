@@ -57,6 +57,10 @@ class LanguageController extends Controller {
 		{
 			 return redirect('contactusmyanmar');
 		}
+		if (strpos($a, 'services') !== false)
+		{
+			 return redirect('servicesmyanmar');
+		}
 
 		if (strpos($a, 'privacypolicy') !== false)
 		{
@@ -146,53 +150,18 @@ class LanguageController extends Controller {
 			->get();
 
 
-		$trvelsectorposts = Posts::where('active',1)
-			->where('categoryid', 1)
-			->where('mname','!=','')
-			->orderBy('id','DESC')
-			->take(6)
-			->get();
-
-	$videoposts = Posts::where('active',1)
-			->where('categoryid', 2)
-			->where('mname','!=','')
-			->orderBy('id','DESC')
-			->take(6)
-			->get();
-
-
-		$specialfeatures = Posts::where('active',1)
-			->where('categoryid', 3)
-			->where('mname','!=','')
-			->orderBy('id','DESC')
-			->take(6)
-			->get();
-
-
-				$reviews = Posts::where('active',1)
-			->where('categoryid', 4)
-			->where('mname','!=','')
-			->orderBy('id','DESC')
-			->take(3)
-			->get();
-
-	$latestblogs = Posts::where('active',1)
-			->where('categoryid','!=', 2)
-			->where('mname','!=','')
-			->orderBy('id','DESC')
-			->take(4)
-			->get();
+		$ourhistorys = Posts::where('active',1)
+		->where('mainslide', 1)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->get();
 
 
 	
 		$categorys = Category::All();
 
 		return view('pages.homemyanmar')
-				->with('travelsectorposts', $trvelsectorposts)
-				->with('videoposts', $videoposts)
-				->with('specialfeatures', $specialfeatures)
-				->with('reviews', $reviews)
-				->with('latestblogs', $latestblogs)
+				->with('ourhistorys', $ourhistorys)
 				->with('categorys', $categorys)
 				->with('mainslides', $mainslides);
 		 	
@@ -213,6 +182,10 @@ class LanguageController extends Controller {
 		if (strpos($a, 'advertisewithusmyanmar') !== false)
 		{
 			 return redirect('advertisewithus');
+		}
+		if (strpos($a, 'servicesmyanmar') !== false)
+		{
+			 return redirect('services');
 		}
 		if (strpos($a, 'contactusmyanmar') !== false)
 		{
@@ -308,53 +281,17 @@ class LanguageController extends Controller {
 			->get();
 
 
-		$trvelsectorposts = Posts::where('active',1)
-			->where('categoryid', 1)
-			->where('name','!=','')
-			->orderBy('id','DESC')
-			->take(6)
-			->get();
-
-	$videoposts = Posts::where('active',1)
-			->where('categoryid', 2)
-			->where('name','!=','')
-			->orderBy('id','DESC')
-			->take(6)
-			->get();
-
-
-		$specialfeatures = Posts::where('active',1)
-			->where('categoryid', 3)
-			->where('name','!=','')
-			->orderBy('id','DESC')
-			->take(6)
-			->get();
-
-
-				$reviews = Posts::where('active',1)
-			->where('categoryid', 4)
-			->where('name','!=','')
-			->orderBy('id','DESC')
-			->take(3)
-			->get();
-
-
-		$latestblogs = Posts::where('active',1)
-			->where('categoryid','!=', 2)
-			->where('name','!=','')
-			->orderBy('id','DESC')
-			->take(4)
-			->get();
-
+		
+		$ourhistorys = Posts::where('active',1)
+		->where('mainslide', 1)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->get();
 
 		$categorys = Category::All();
 
 		return view('pages.home')
-				->with('travelsectorposts', $trvelsectorposts)
-				->with('videoposts', $videoposts)
-				->with('specialfeatures', $specialfeatures)
-				->with('reviews', $reviews)
-				->with('latestblogs', $latestblogs)
+				->with('ourhistorys', $ourhistorys)
 				->with('categorys', $categorys)
 				->with('mainslides', $mainslides);
 				
@@ -370,54 +307,18 @@ class LanguageController extends Controller {
 			->orderBy('id','DESC')
 			->get();
 
-
-		$trvelsectorposts = Posts::where('active',1)
-			->where('categoryid', 1)
-			->where('mname','!=','')
-			->orderBy('id','DESC')
-			->take(6)
-			->get();
-
-	$videoposts = Posts::where('active',1)
-			->where('categoryid', 2)
-			->where('mname','!=','')
-			->orderBy('id','DESC')
-			->take(6)
-			->get();
-
-
-		$specialfeatures = Posts::where('active',1)
-			->where('categoryid', 3)
-			->where('mname','!=','')
-			->orderBy('id','DESC')
-			->take(6)
-			->get();
-
-
-				$reviews = Posts::where('active',1)
-			->where('categoryid', 4)
-			->where('mname','!=','')
-			->orderBy('id','DESC')
-			->take(3)
-			->get();
-
-	$latestblogs = Posts::where('active',1)
-			->where('categoryid','!=', 2)
-			->where('mname','!=','')
-			->orderBy('id','DESC')
-			->take(4)
-			->get();
+$ourhistorys = Posts::where('active',1)
+		->where('mainslide', 1)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->get();
 
 
 	
 		$categorys = Category::All();
 
 		return view('pages.homemyanmar')
-				->with('travelsectorposts', $trvelsectorposts)
-				->with('videoposts', $videoposts)
-				->with('specialfeatures', $specialfeatures)
-				->with('reviews', $reviews)
-				->with('latestblogs', $latestblogs)
+			->with('ourhistorys', $ourhistorys)
 				->with('categorys', $categorys)
 				->with('mainslides', $mainslides);
 		 	
