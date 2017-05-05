@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
 
-  <title>My Magical  |  Myanmars</title>
-  <meta name="description" content="My Magical Myanmar">
+  <title>infolink  |  IT Solution</title>
+  <meta name="description" content="infolink">
   <meta name="author" content="Aung Thein Naing">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -24,6 +24,9 @@
   <link rel="stylesheet" href="<?php echo url(); ?>/css/icon-font.css">
   <link rel="stylesheet" href="<?php echo url(); ?>/css/anchro.css">
 
+      <link rel="stylesheet" href="<?php echo url(); ?>/css/beautyf.css">
+ 
+
   <link rel="stylesheet" href="<?php echo url(); ?>/rs-plugin/css/settings.css">
 
 
@@ -41,7 +44,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
-  <!-- <link rel="icon" href="<?php echo url(); ?>/images/mymagicalmyanmar-web-favicon.png" type="image/png" sizes="16x16"> -->
+  <link rel="icon" href="<?php echo url(); ?>/images/mylogo.png" type="image/png" sizes="16x16">
 
   <!--  notification message -->
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

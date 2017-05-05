@@ -45,6 +45,7 @@ $ourhistorys = Posts::where('active',1)
 		->where('mainslide', 1)
 		->where('name','!=','')
 		->orderBy('id','DESC')
+		->take(3)
 		->get();
 	$mainslides = Posts::where('active',1)
 		->where('mainslide', 1)
@@ -52,6 +53,11 @@ $ourhistorys = Posts::where('active',1)
 		->orderBy('id','DESC')
 		->get();
 
+		$populars = Posts::where('active',1)
+		->where('popular', 1)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->get();
 
 		
 		$categorys = Category::All();
@@ -59,19 +65,40 @@ $ourhistorys = Posts::where('active',1)
 		return view('pages.home')
 		->with('categorys', $categorys)
 		->with('mainslides', $mainslides)	
-		->with('ourhistorys', $ourhistorys);
+		->with('ourhistorys', $ourhistorys)
+		->with('populars', $populars);
 		 	
 	}
 
 	public function myanmarindex()
 	{
 
+	$ourhistorys = Posts::where('active',1)
+		->where('mainslide', 1)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->take(3)
+		->get();
+	$mainslides = Posts::where('active',1)
+		->where('mainslide', 1)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->get();
+
+		$populars = Posts::where('active',1)
+		->where('popular', 1)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->get();
+
 		
-		$categorys = Category::orderBy('id', 'desc')->get();
+		$categorys = Category::All();
 
 		return view('pages.homemyanmar')
-			->with('categorys', $categorys);
-		 	
+		->with('categorys', $categorys)
+		->with('mainslides', $mainslides)	
+		->with('ourhistorys', $ourhistorys)
+		->with('populars', $populars);
 	}
 
 	

@@ -154,17 +154,25 @@ class LanguageController extends Controller {
 		->where('mainslide', 1)
 		->where('name','!=','')
 		->orderBy('id','DESC')
+		->take(3)
 		->get();
 
 
 	
+	$populars = Posts::where('active',1)
+		->where('popular', 1)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->get();
+
+		
 		$categorys = Category::All();
 
 		return view('pages.homemyanmar')
-				->with('ourhistorys', $ourhistorys)
-				->with('categorys', $categorys)
-				->with('mainslides', $mainslides);
-		 	
+		->with('categorys', $categorys)
+		->with('mainslides', $mainslides)	
+		->with('ourhistorys', $ourhistorys)
+		->with('populars', $populars);
 	}
 
 	public function changeen()
@@ -286,14 +294,23 @@ class LanguageController extends Controller {
 		->where('mainslide', 1)
 		->where('name','!=','')
 		->orderBy('id','DESC')
+		->take(3)
 		->get();
 
+		$populars = Posts::where('active',1)
+		->where('popular', 1)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->get();
+
+		
 		$categorys = Category::All();
 
 		return view('pages.home')
-				->with('ourhistorys', $ourhistorys)
-				->with('categorys', $categorys)
-				->with('mainslides', $mainslides);
+		->with('categorys', $categorys)
+		->with('mainslides', $mainslides)	
+		->with('ourhistorys', $ourhistorys)
+		->with('populars', $populars);
 				
 		 	
 	}
@@ -311,16 +328,25 @@ $ourhistorys = Posts::where('active',1)
 		->where('mainslide', 1)
 		->where('name','!=','')
 		->orderBy('id','DESC')
+		->take(3)
 		->get();
 
 
 	
+	$populars = Posts::where('active',1)
+		->where('popular', 1)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->get();
+
+		
 		$categorys = Category::All();
 
 		return view('pages.homemyanmar')
-			->with('ourhistorys', $ourhistorys)
-				->with('categorys', $categorys)
-				->with('mainslides', $mainslides);
+		->with('categorys', $categorys)
+		->with('mainslides', $mainslides)	
+		->with('ourhistorys', $ourhistorys)
+		->with('populars', $populars);
 		 	
 	}
 

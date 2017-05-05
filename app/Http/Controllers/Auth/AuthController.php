@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\Registrar;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 use App\Category;
+use App\Posts;
 
 use View;
 use Config;
@@ -39,7 +40,14 @@ class AuthController extends Controller {
 		 
    		$categorys = Category::orderBy('id', 'desc')->paginate(10);
     	View::share('categorys', $categorys);
-   
+   		
+   			$ourhistorys = Posts::where('active',1)
+		->where('mainslide', 1)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->get();
+		View::share('ourhistorys', $ourhistorys);
+
 		$this->auth = $auth;
 		$this->registrar = $registrar;
 

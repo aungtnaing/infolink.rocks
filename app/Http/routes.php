@@ -38,6 +38,7 @@
 		->where('mainslide', 1)
 		->where('name','!=','')
 		->orderBy('id','DESC')
+		->take(3)
 		->get();
 			return view('pages.about')
 			->with('categorys', $categorys)
@@ -53,6 +54,7 @@
 		->where('mainslide', 1)
 		->where('name','!=','')
 		->orderBy('id','DESC')
+		->take(3)
 		->get();
 			return view('pages.aboutmyanmar')
 			->with('categorys', $categorys)
@@ -69,6 +71,7 @@
 		->where('mainslide', 1)
 		->where('name','!=','')
 		->orderBy('id','DESC')
+		->take(3)
 		->get();
 				return view('pages.services')
 					->with('categorys', $categorys)
@@ -84,6 +87,7 @@
 		->where('mainslide', 1)
 		->where('name','!=','')
 		->orderBy('id','DESC')
+		->take(3)
 		->get();
 				return view('pages.servicesmyanmar')
 					->with('categorys', $categorys)
@@ -141,6 +145,7 @@
 		->where('mainslide', 1)
 		->where('name','!=','')
 		->orderBy('id','DESC')
+		->take(3)
 		->get();
 			
 			return view('pages.contactus')
@@ -156,6 +161,7 @@
 		->where('mainslide', 1)
 		->where('name','!=','')
 		->orderBy('id','DESC')
+		->take(3)
 		->get();
 			return view('pages.contactusmyanmar')
 			->with('categorys', $categorys)

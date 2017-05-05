@@ -59,13 +59,23 @@ class HomeController extends Controller {
 		->where('mainslide', 1)
 		->where('name','!=','')
 		->orderBy('id','DESC')
+		->take(3)
 		->get();
+		
+		$populars = Posts::where('active',1)
+		->where('popular', 1)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->get();
+
+		
 		$categorys = Category::All();
 
 		return view('pages.home')
 		->with('categorys', $categorys)
-		->with('mainslides', $mainslides)
-			->with('ourhistorys', $ourhistorys);
+		->with('mainslides', $mainslides)	
+		->with('ourhistorys', $ourhistorys)
+		->with('populars', $populars);
 		
 		
 	}

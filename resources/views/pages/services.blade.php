@@ -27,29 +27,26 @@
 				<div class="col-md-4">
 					<div class="second-service-item">
 						<!-- <img src="assets/images/01-service-icon.png" alt=""> -->
-						<h3 style="text-align:left">Architecture</h3>
+						<h3 style="text-align:left">Development</h3>
 						<div class="line-dec"></div>
-						<h5 style="text-align:left"><i class="fa fa-check"></i> Conceptual Design</h5>
-						<h5 style="text-align:left"><i class="fa fa-check"></i> Feasibility study</h5>
-						<h5 style="text-align:left"><i class="fa fa-check"></i> Licensing</h5>
-						<h5 style="text-align:left"><i class="fa fa-check"></i> Executive Project (Archi, Structural, M&E)</h5>
-						<h5 style="text-align:left"><i class="fa fa-check"></i> Interior Design</h5>
-						<h5 style="text-align:left"><i class="fa fa-check"></i> Business Plan</h5>
-						<h5 style="text-align:left"><i class="fa fa-check"></i> Management Plan</h5>
-						<h5 style="text-align:left"><i class="fa fa-check"></i> Site Quality Control Supervision</h5>
-						<h5 style="text-align:left"><i class="fa fa-check"></i> Handover and Maintenance Follow-up</h5>
+						<h5 style="text-align:left"><i class="fa fa-check"></i> eCommerce</h5>
+						<h5 style="text-align:left"><i class="fa fa-check"></i> Web Application</h5>
+						<h5 style="text-align:left"><i class="fa fa-check"></i> Company Profiles</h5>
+						<h5 style="text-align:left"><i class="fa fa-check"></i> Content Management System</h5>
+						<h5 style="text-align:left"><i class="fa fa-check"></i> Business Layer Application</h5>
+						<h5 style="text-align:left"><i class="fa fa-check"></i> Client Server</h5>
+						
 
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="second-service-item">
 						<!-- <img src="assets/images/02-service-icon.png" alt=""> -->
-						<h3 style="text-align:left">Urban Planning</h3>
+						<h3 style="text-align:left">Consulting</h3>
 						<div class="line-dec"></div>
-						<h5 style="text-align:left"><i class="fa fa-check"></i> Feasibility study</h5>
-						<h5 style="text-align:left"><i class="fa fa-check"></i> Master planning</h5>
-						<h5 style="text-align:left"><i class="fa fa-check"></i> Infrastructural design</h5>
-						<h5 style="text-align:left"><i class="fa fa-check"></i> Landscaping</h5>
+						<h5 style="text-align:left"><i class="fa fa-check"></i> Data Collection</h5>
+						<h5 style="text-align:left"><i class="fa fa-check"></i> Reporting</h5>
+						<h5 style="text-align:left"><i class="fa fa-check"></i> Survey</h5>
 						<h5 style="text-align:left"><i class="fa fa-check"></i> Business Plan</h5>
 						<h5 style="text-align:left"><i class="fa fa-check"></i> Management Plan</h5>
 
