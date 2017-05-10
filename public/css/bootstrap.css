@@ -1073,7 +1073,7 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 30px;
+  font-size: 60px;
 }
 h3,
 .h3 {
@@ -1399,6 +1399,8 @@ pre code {
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+    height: 81px;
+
   }
 }
 .container-fluid {

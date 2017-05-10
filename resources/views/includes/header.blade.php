@@ -21,20 +21,20 @@
 							<li><a href="">PROJECTS <span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									@foreach($categorys as $category)
-										@if(count($category->posts)>0)
-											<li><a href="#">{{ $category->name }}<span class="caret"></span></a>
-											<ul class="dropdown-menu">
-											@foreach($category->posts as $post)
-													
-														<li><a href="">{{ $post->name }}</a></li>
-													
+												@if(count($category->posts)>0)
+													<li><a href="#">{{ $category->name }}<span class="caret"></span></a>
+													<ul class="dropdown-menu">
+													@foreach($category->posts as $post)
+															
+																<li><a href="">{{ $post->name }}</a></li>
+															
+													@endforeach
+													</ul>
+													</li>
+												@else
+													<li><a href="#">{{ $category->name }}</a></li>
+												@endif
 											@endforeach
-											</ul>
-											</li>
-										@else
-											<li><a href="#">{{ $category->name }}</a></li>
-										@endif
-									@endforeach
 									
 								</ul>
 							</li>
