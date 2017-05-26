@@ -12,7 +12,7 @@
 											<li class="menu-item-has-children"><a href="#">{{ $category->mname }}</span></a>
 											@foreach($category->posts as $post)
 													<ul class="sub-menu">
-														<li><a href="">{{ $post->mname }}</a></li>
+														<li><a href="{{ $post->caption1 }}">{{ $post->mname }}</a></li>
 													</ul>
 											@endforeach
 											</li>

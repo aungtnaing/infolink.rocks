@@ -26,7 +26,7 @@
 											<ul class="dropdown-menu">
 											@foreach($category->posts as $post)
 													
-														<li><a href="">{{ $post->mname }}</a></li>
+														<li><a href="{{ $post->caption1 }}">{{ $post->mname }}</a></li>
 													
 											@endforeach
 											</ul>

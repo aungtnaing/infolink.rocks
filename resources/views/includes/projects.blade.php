@@ -26,10 +26,10 @@
 						<div class="project-item">
 							<div class="thumb">
 								<div class="image">
-									<a href=""><img src="{{ $popular->photourl2 }}" alt=""></a>
+									<a href="{{ $popular->caption1 }}"><img src="{{ $popular->photourl2 }}" alt=""></a>
 								</div>
 							</div>
-							<a href=""><h4>{{ $popular->name }}</h4></a>
+							<a href="{{ $popular->caption1 }}"><h4>{{ $popular->name }}</h4></a>
 							<span>{{ $popular->category->name }}</span>
 						</div>
 					</div>
