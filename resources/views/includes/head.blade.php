@@ -2,8 +2,7 @@
 <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-   <meta name="google-site-verification"
-             content="<meta name="google-site-verification" content="jklJf8ZN3LIWA8evY5oIe3D4UdToyWc0TXtwuUBFTXg" />" />
+  <meta name="google-site-verification" content="jklJf8ZN3LIWA8evY5oIe3D4UdToyWc0TXtwuUBFTXg" />
              
   <title>infolink  |  IT Solution</title>
   <meta name="description" content="infolink">
