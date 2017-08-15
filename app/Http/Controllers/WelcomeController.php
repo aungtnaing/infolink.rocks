@@ -82,7 +82,7 @@ class WelcomeController extends Controller {
 
 		Seo::set('title', 'Info-link IT Solution');
 	Seo::set('description', "Infolink it solution is a full serviced eCommerce Web App, Company Profiles, Android App, Business-Tire App, Desktop App and Consultant, data collection assessment firm based in Myanmar. The company was established in 2011 by Mr. Aung Thein Naing.<br> He is an experienced IT fields and worked in Myanmar for the past ten years. He has over 15 years experience in programming and consultant. Mr. Aung Thein Naing is also currently the Managing Director and Senior Programmer for Infolink IT Solution and Consulting for Myanmar World Distributation Limited in Myanmar.");
-	Seo::set('keywords', "infolink,infolink it solution,inof-link,Infolink it");
+	Seo::set('keywords', "infolink,infolink it solution,info-link it solution,infolink rock");
 	Seo::set('breadcrumblist', [
 	    ['title' => 'infolink', 'url' => 'infolink.rocks'],
 	    ['title' => 'infolink', 'url' => 'infolink.rocks'],
