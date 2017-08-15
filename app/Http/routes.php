@@ -30,6 +30,14 @@
 		Route::get('homemyanmar', 'LanguageController@homemyanmar');
 
 
+		Route::get('sitemap', function() {
+
+			return view('pages.sitemap');
+			
+			
+			
+		});
+
 
 		Route::get('aboutus', function() {
 

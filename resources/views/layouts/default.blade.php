@@ -4,7 +4,10 @@
 	@include('includes.head')  
 </head>
 <body>
-
+	@include('laravel-seo::sd-organization')
+	@include('laravel-seo::sd-local-business')
+	@include('laravel-seo::sd-website')
+	@include('laravel-seo::sd-breadcrumblist')
 	
 	<div class="sidebar-menu-container" id="sidebar-menu-container">
 

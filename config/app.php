@@ -140,7 +140,9 @@ return [
 	    'Illuminate\Html\HtmlServiceProvider', 
     	'Illuminate\Filesystem\FilesystemServiceProvider',
     	'App\Providers\ComposerServiceProvider',
-
+    	Helori\LaravelSeo\SeoServiceProvider::class,
+    	
+    
 
         /*
          * Application Service Providers...
@@ -201,6 +203,8 @@ return [
         'Form'      => 'Illuminate\Html\FormFacade',
         'HTML'      => 'Illuminate\Html\HtmlFacade',
         'Image' 	=> 'Intervention\Image\Facades\Image',
+        'Seo' => Helori\LaravelSeo\Facades\Seo::class,
+        
     ],
 
 ];

@@ -10,7 +10,8 @@
         "maatwebsite/excel": "2.0.6",
          "fzaninotto/faker": "1.6.*@dev",
          "intervention/image": "2.2.2",
-         "illuminate/filesystem": "5.*"
+         "illuminate/filesystem": "5.*",
+		"helori/laravel-seo": "dev-master"
 
 	},
 	"require-dev": {

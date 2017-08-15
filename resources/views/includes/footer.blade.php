@@ -46,6 +46,11 @@
 						<p>@ 2016 CocoTemplates. All Rights Reserved.</p>
 					</div>
 				</div>
+				  <div class="col-xs-12 col-sm-12 col-md-4 text-right">
+                            <div class="developed"><a target="_blank" href="{{ url('/sitemap') }}">sitemap</a> </div>
+                            
+                            <!--/ .developed-->
+                        </div>
 			</div>
 		</div>
 	</footer>
